@@ -6,15 +6,14 @@ Few-shot Test-Time Domain Adaptation focuses on adapting a model at test time to
 
 ## Installation
 ### Requirements
+The code is tested on 
 ```bash
-pip install -r torch21_cu118_py39.yml
+PyTorch = 2.1.2
+CUDA = 12.2
+pytorch-lightning = 2.0.0
+openCLIP = 2.16
 ```
 
-### Download CLIP's pretrained weights
-From [open_clip](https://github.com/mlfoundations/open_clip/blob/main/docs/PRETRAINED.md) to 
-```bash
-./modelzoo/openai_clip
-```
 ### Download datasets
 **WILDS**
 
@@ -66,6 +65,7 @@ Reference: [lightning-hydra-template](https://github.com/ashleve/lightning-hydra
 ### Download pretrained checkpoints 
 From [OneDrive](https://utoronto-my.sharepoint.com/:f:/g/personal/zhixiang_chi_mail_utoronto_ca/EuOsVq42nAlCvLm2_F3se5wBvD7ufOcuvUsdlCy5sPjRzQ?e=8bAYcE) and save in the folder of `./modelzoo`
 
+The bash files in 
 ### DomainNet
 ```bash
 python eval.py model=vdpg_ViT_B16_CLIP.yaml paths.data_dir="./data" data=<data_name> ckpt_path=./modelzoo/<ckpt_name>
