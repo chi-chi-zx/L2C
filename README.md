@@ -96,20 +96,24 @@ python eval.py model.model.num_prompts=5 paths.data_dir="./data" data=fmow_contr
 
 If you use this code in your research, please consider citing our paper:
 ```
-@inproceedings{chi_2024_ICLR,
+@inproceedings{chi2025learning,
+  title={Learning to adapt frozen clip for few-shot test-time domain adaptation},
+  author={Chi, Zhixiang and Gu, Li and Liu, Huan and Wang, Ziqiang and Wu, Yanan and Wang, Yang and Plataniotis, Konstantinos N},
+  booktitle={The Thirteenth International Conference on Learning Representations},
+  year={2025}
+}
+
+@inproceedings{chiadapting,
   title={Adapting to Distribution Shift by Visual Domain Prompt Generation},
-  author={Zhixiang Chi, Li Gu, Tao Zhong, Huan Liu, Yuanhao Yu, Konstantinos N Plataniotis, Yang Wang},
-  booktitle={Proceedings of the Twelfth International Conference on Learning Representations},
+  author={Chi, Zhixiang and Gu, Li and Zhong, Tao and Liu, Huan and YU, YUANHAO and Plataniotis, Konstantinos N and Wang, Yang},
+  booktitle={The Twelfth International Conference on Learning Representations},
   year={2024}
 }
 
-@inproceedings{
-zhong2022metadmoe,
-title={Meta-{DM}oE: Adapting to Domain Shift by Meta-Distillation from Mixture-of-Experts},
-author={Tao Zhong and Zhixiang Chi and Li Gu and Yang Wang and YUANHAO YU and Jin Tang},
-booktitle={Advances in Neural Information Processing Systems},
-editor={Alice H. Oh and Alekh Agarwal and Danielle Belgrave and Kyunghyun Cho},
-year={2022},
-url={https://openreview.net/forum?id=_ekGcr07Dsp}
+@article{zhong2022meta,
+  title={Meta-dmoe: Adapting to domain shift by meta-distillation from mixture-of-experts},
+  author={Zhong, Tao and Chi, Zhixiang and Gu, Li and Wang, Yang and Yu, Yuanhao and Tang, Jin},
+  journal={Advances in Neural Information Processing Systems},
+  year={2022}
 }
 ```
