@@ -1,4 +1,4 @@
-# VDPG: Adapting to Distribution Shift by Visual Domain Prompt Generation (ICLR 2024)
+# Learning to Adapt Frozen CLIP for Few-Shot Test-Time Domain Adaptation (ICLR 2025)
 [Paper](https://openreview.net/pdf?id=TD3SGJfBC7)
 
 ## 💡 Abstract
@@ -63,33 +63,9 @@ Reference: [lightning-hydra-template](https://github.com/ashleve/lightning-hydra
 
 ## Evaluation
 ### Download pretrained checkpoints 
-From [OneDrive](https://utoronto-my.sharepoint.com/:f:/g/personal/zhixiang_chi_mail_utoronto_ca/EuOsVq42nAlCvLm2_F3se5wBvD7ufOcuvUsdlCy5sPjRzQ?e=8bAYcE) and save in the folder of `./modelzoo`
+From [OneDrive](https://drive.google.com/drive/folders/1x2Z678utcJjYPCD0KLnquxb2n048qkv2?usp=sharing) and save in the folder of `./modelzoo`
 
-The bash files in 
-### DomainNet
-```bash
-python eval.py model=vdpg_ViT_B16_CLIP.yaml paths.data_dir="./data" data=<data_name> ckpt_path=./modelzoo/<ckpt_name>
-```
 
-For example, we run the evaluation using DomainNet's sketch domain as the out-of-distribution.
-```bash
-python eval.py model=vdpg_ViT_B16_CLIP.yaml paths.data_dir="./data" data=domainnet_sketch_contrastive.yaml ckpt_path=./modelzoo/domainnet_sketch.ckpt
-```
-### WILDS
-iWildCam: 
-``` bash
-python eval.py model.model.num_prompts=100 paths.data_dir="./data" data=iwild_contrastive ckpt_path=./modelzoo/iWildCam.ckpt
-```
-
-Camelyon: 
-``` bash
-python eval.py model.model.num_prompts=5 paths.data_dir="./data" data=camelyon17_contrastive ckpt_path=./modelzoo/Camelyon.ckpt
-```
-
-FMoW: 
-``` bash
-python eval.py model.model.num_prompts=5 paths.data_dir="./data" data=fmow_contrastive ckpt_path=./modelzoo/FMoW.ckpt
-```
 
 
 ## <a name="cite"/> :clipboard: Citation
