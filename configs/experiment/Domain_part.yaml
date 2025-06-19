@@ -1,0 +1,64 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment=example
+
+# change data transform and loss combination (2)
+
+defaults:
+  - override /data: domainnet_part.yaml
+  #- override /model: prompt_tta_ViT_B16_CLIP.yaml
+  - override /model: prompt_tta_ViT_L14_px336_CLIP_default.yaml
+  - override /callbacks: default.yaml
+  - override /trainer: default.yaml
+
+# all parameters below will be merged with parameters from default configurations set above
+# this allows you to overwrite only specified parameters
+
+trainer:
+#  devices: [2]
+  max_epochs: 30
+  max_steps: 200000 
+  # num_sanity_val_steps: 10
+  val_check_interval: 0.33
+  #gradient_clip_val: 1
+    
+# path to data directory
+paths:
+  data_dir: "/data/tao/wilds/data"
+
+model:
+  train_support_ratio: 0.2
+  train_coef_prompt_loss: 0.1
+  train_coef_corr_loss: 0.1
+  optimizer:
+    optimizer: sgd
+    base_lr: 0.0005
+    weight_decay: 0.1
+    momentum: 0.9
+  #loss_func:                                                                                                                                                  
+    #_target_: src.solver.losses.Arc_loss 
+
+  model:
+    num_prompts: 10
+    correlation_loss: True
+    encoder_depth: 2
+    #decoder_depth: 2
+    #decoder_attention_downsample_rate: 2
+    #decoder_num_heads: 4
+    #decoder_mlp_dim: 512
+
+  scheduler:
+    # scheduler: hard_steps
+    warmup_epoch: 0
+    total_epoch: 30
+
+data:   
+    batch_size: 64
+    #n_negative_groups_per_batch: 1                                                                                                 
+    #n_points_per_negative_group: 16
+    input_resolution: 336
+
+task_name: "Part_0.0005_336"
+test: False
+seed: 42

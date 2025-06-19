@@ -1,0 +1,69 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment=example
+
+# change data transform and loss combination (2)
+
+defaults:
+  - override /data: camelyon17_contrastive.yaml
+  #- override /model: prompt_tta_ViT_L14_CLIP_default.yaml
+  - override /model: prompt_tta_ViT_L14_px336_CLIP_default.yaml
+  # - override /model: prompt_tta_ViT_B16_CLIP.yaml
+  - override /callbacks: default.yaml
+  - override /trainer: default.yaml
+
+# all parameters below will be merged with parameters from default configurations set above
+# this allows you to overwrite only specified parameters
+
+trainer:
+#  devices: [2]
+  max_epochs: 30
+  max_steps: 200000000
+  # num_sanity_val_steps: 10
+  gradient_clip_val: 1
+  # deterministic: True
+  precision: 16
+    
+# path to data directory
+paths:
+  data_dir: "/data/tao/wilds/data"
+
+callbacks:
+  model_checkpoint:
+    monitor: test_ood_acc_avg
+
+model:
+  train_support_ratio: 0.1
+  text_loss_coeff: 0.1
+  
+  optimizer:
+    optimizer: sgd
+    base_lr: 0.005
+    weight_decay: 0.01
+    momentum: 0.9
+  loss_func:                                                                                                                                                  
+    _target_: src.solver.losses.SoftmaxLoss 
+    # _target_: src.solver.losses.ClipLoss 
+
+  scheduler:
+    # scheduler: hard_steps
+    warmup_epoch: 0
+    total_epoch: 30
+  model:
+    side_layers: 1
+    decoder_attention_downsample_rate: 1
+    #decoder_mlp_dim: 2048
+    learnable_scaling: True
+    pool_length: 5                                                                                                      
+    pool_size: 5
+
+data:   
+    batch_size: 256
+    input_resolution: 336
+    # num_workers: 0
+
+task_name: "camelyon_CAMELYON17_COMB_S1GClip1_0.005_256_0.1_30E_LearnS_TLoss0.1_Cache5_5_16_Down1_336"
+# task_name: "camelyon_check"
+test: False
+seed: 42

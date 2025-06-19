@@ -1,0 +1,27 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment=example
+
+defaults:
+  - override /data: iwild_standard_supervised.yaml
+  - override /model: prompt_tta_supervised.yaml
+  - override /callbacks: default.yaml
+  - override /trainer: default.yaml
+
+# all parameters below will be merged with parameters from default configurations set above
+# this allows you to overwrite only specified parameters
+
+trainer:
+  devices: [3]
+  val_check_interval: 1.0
+
+task_name: "ViT_B16_CLIP_ERM"
+
+model:
+  model:
+    CLIP_model_name: ViT-B-16
+    ViT: "clip_vit_b16"
+
+data:
+  input_resolution: 224

@@ -1,0 +1,38 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment=example
+
+defaults:
+  - override /data: fmow_uns.yaml
+  - override /model: prompt_tta_unsupervised_prompt_encoder.yaml
+  - override /callbacks: default.yaml
+  - override /trainer: default.yaml
+
+# all parameters below will be merged with parameters from default configurations set above
+# this allows you to overwrite only specified parameters
+
+trainer:
+  devices: [3]
+  val_check_interval: 1.0
+  max_epochs: 30
+
+model:
+  model:
+    CLIP_model_name: ViT-L-14-336
+    ViT: "clip_vit_L14"
+    num_prompts: 5
+    CLIP_checkpoints_dir: /data/pretrained_models/CLIP_PreTrain/openai_clip
+    correlation_loss: True
+data:
+  input_resolution: 336
+  # batch_size: 256
+  # n_groups_per_batch: 64
+  # num_workers: 8
+
+callbacks:
+  model_checkpoint:
+    monitor: "val_prompt_loss"
+    mode: "min"
+
+task_name: "Pre_train"

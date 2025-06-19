@@ -1,0 +1,32 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment=example
+
+defaults:
+  - override /data: iwild_contrastive.yaml
+  - override /model: prompt_tta_ViT_B16_CLIP.yaml
+  - override /callbacks: default.yaml
+  - override /trainer: default.yaml
+
+# all parameters below will be merged with parameters from default configurations set above
+# this allows you to overwrite only specified parameters
+
+ckpt_path: /home/ligu/projects/prompt_tta_sam_iclr2024/logs/train/runs/unsupervised/checkpoints/epoch_013.ckpt
+
+trainer:
+  devices: [2]
+  val_check_interval: 1.0
+  max_epochs: 40
+
+model:
+  train_coef_prompt_loss: 1.0
+  model:
+    CLIP_model_name: ViT-B-16
+    ViT: "clip_vit_b16"
+    freeze_components: ["image_encoder"]
+
+data:
+  input_resolution: 224
+
+task_name: "B16_with_pretraine_epoch13"

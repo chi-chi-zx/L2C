@@ -1,0 +1,45 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment=example
+
+defaults:
+  - override /data: domainnet_sketch_ERM.yaml
+  - override /model: ERM_B16.yaml
+  - override /callbacks: default.yaml
+  - override /trainer: default.yaml
+
+# all parameters below will be merged with parameters from default configurations set above
+# this allows you to overwrite only specified parameters
+
+trainer:
+#  devices: [2]
+  max_epochs: 30
+  max_steps: 200000 
+  val_check_interval: 1.0
+
+# path to data directory
+paths:
+  data_dir: "/data/tao/wilds/data"
+
+model:
+  optimizer:
+    optimizer: sgd
+    base_lr: 0.00005
+    weight_decay: 0.03
+    momentum: 0.9
+
+  scheduler:
+    # scheduler: hard_steps
+    warmup_epoch: 0
+    total_epoch: 30
+
+data:   
+    batch_size: 64
+    # n_negative_groups_per_batch: 2                                                                                                 
+    # n_points_per_negative_group: 2
+    input_resolution: 224
+
+task_name: "Ske_Direct_RevertAtten_ReuseLNProj_BeforeNorm_0.00005"
+test: False
+seed: 42

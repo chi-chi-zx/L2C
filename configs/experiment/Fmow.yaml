@@ -1,0 +1,70 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment=example
+
+# change data transform and loss combination (2)
+
+defaults:
+  - override /data: fmow_contrastive.yaml
+  #- override /model: prompt_tta_ViT_L14_CLIP_default.yaml
+  - override /model: prompt_tta_ViT_L14_px336_CLIP_default.yaml
+  # - override /model: prompt_tta_ViT_B16_CLIP.yaml
+  - override /callbacks: default.yaml
+  - override /trainer: default.yaml
+
+# all parameters below will be merged with parameters from default configurations set above
+# this allows you to overwrite only specified parameters
+
+
+
+# path to data directory
+paths:
+  data_dir: "/data/tao/wilds/data"
+
+callbacks:
+  model_checkpoint:
+    monitor: test_ood_acc_worst_region
+
+model:
+  train_support_ratio: 0.2
+  text_loss_coeff: 0.0
+  
+  optimizer:
+    optimizer: sgd
+    base_lr: 0.0025
+    weight_decay: 0.01
+    momentum: 0.9
+  loss_func:                                                                                                                                                  
+    # _target_: src.solver.losses.ClipLoss 
+    _target_: src.solver.losses.SoftmaxLoss 
+
+  scheduler:
+    # scheduler: hard_steps
+    warmup_epoch: 0
+    total_epoch: 20
+  model:
+    side_layers: 17
+    decoder_attention_downsample_rate: 4
+    learnable_scaling: True
+    pool_length: 5                                                                                                      
+    pool_size: 5
+    #custmized_SideNet: FMOW-L-14.json
+
+data:   
+    batch_size: 64
+    input_resolution: 336
+
+trainer:
+#  devices: [2]
+  max_epochs: 20
+  max_steps: 200000000
+  # num_sanity_val_steps: 10
+  gradient_clip_val: 1
+  # deterministic: True
+  precision: 16
+  
+task_name: "FMOW_Greedy_S17GClip1_0.0025_64_0.2_LearnS_TLoss0_Cache5_5_336_WR0.01_E20_Seed123_ALL"
+# task_name: "FMOW_check"
+test: False
+seed: 123

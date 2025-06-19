@@ -1,0 +1,8 @@
+defaults:
+  - prompt_tta_ViT_L14_px336_CLIP_default.yaml
+
+model:
+  CLIP_model_name: ViT-B-16
+  ViT: "clip_vit_b16"
+  decoder_mlp_dim: 768
+  decoder_attention_downsample_rate: 4

@@ -1,0 +1,46 @@
+_target_: src.lightning.module.episodic_module_hydra.DomainSpecificEpisodicLearningLightningModule
+
+train_support_ratio: 0.5
+test_support_size: 16
+text_loss_coeff: 0.1
+
+model:
+  _target_: src.models.build_model_hydra.build_prompt_tta
+  CLIP_model_name: ViT-L-14-336
+  CLIP_checkpoints_source: "openai"
+  CLIP_checkpoints_dir: "/data/pretrained_models/CLIP_PreTrain/openai_clip"
+
+  ViT: "clip_vit_L14"
+  
+  decoder_mlp_dim: 1024
+  decoder_num_heads: 8
+  decoder_attention_downsample_rate: 4
+  side_layers: 3
+  
+  num_class: 182
+  pool_length: 1
+  pool_size: 10
+  learnable_scaling: False
+
+  freeze_components: ["CLIP_model"]
+  custmized_SideNet: False
+
+loss_func:
+  _target_: src.solver.losses.ClipLoss
+
+optimizer:
+  _target_: src.solver.optimizer.make_optimizer
+  _partial_: true
+  optimizer: "sgd"
+  base_lr: 0.003
+  momentum: 0.9
+  weight_decay: 0.003
+
+scheduler:
+  _target_: src.solver.lr_scheduler.make_scheduler
+  _partial_: true
+  warmup_epoch: 0
+  total_epoch: 30
+  scheduler: "cosine"
+  lr_decay_factor: 0.0
+

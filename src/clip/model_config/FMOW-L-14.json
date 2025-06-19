@@ -1,0 +1,13 @@
+{
+    "embed_dim": 768,
+    "image_resolution": 336,
+    "vision_layers": 12,
+    "vision_width": 512,
+    "vision_patch_size": 14,
+    "context_length": 1,
+    "vocab_size": 1,
+    "transformer_width": 1,
+    "transformer_heads": 1,
+    "transformer_layers": 1
+
+}

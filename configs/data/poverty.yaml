@@ -1,0 +1,7 @@
+_target_: src.lightning.datamodule.wilds2_labeled_datamodule.WILDS2LabeledDataModule
+data_path: ${paths.data_dir}
+dataset_name: poverty
+input_resolution: 224
+domain_type: adaptive
+batch_size: 64
+num_workers: 8
