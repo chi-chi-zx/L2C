@@ -61,7 +61,7 @@ Reference: [lightning-hydra-template](https://github.com/ashleve/lightning-hydra
 
 ## Evaluation
 ### Download pretrained checkpoints 
-From [OneDrive](https://drive.google.com/drive/folders/1x2Z678utcJjYPCD0KLnquxb2n048qkv2?usp=sharing) and save in the folder of `./model_ckpts`
+From [Google Drive](https://drive.google.com/drive/folders/1x2Z678utcJjYPCD0KLnquxb2n048qkv2?usp=sharing) and save in the folder of `./model_ckpts`
 
 ### Inference 
 The default bash scripts in the eval folder provide inference commands for all datasets. For example, to test on the FMOW dataset using the CLIP-ViT/B16 model, update the data and checkpoint paths, then run:
