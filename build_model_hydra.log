@@ -1,0 +1,90 @@
+[2024-02-15 02:31:41,541][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 02:31:41,548][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 02:31:41,637][root][INFO] - Loading pretrained ViT-L-14-336 from OpenAI.
+[2024-02-15 02:32:30,856][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 02:32:30,865][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 02:32:30,974][root][INFO] - Loading pretrained ViT-L-14-336 from OpenAI.
+[2024-02-15 02:34:43,793][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 02:34:43,800][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 02:34:43,882][root][INFO] - Loading pretrained ViT-L-14-336 from OpenAI.
+[2024-02-15 02:35:27,154][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 02:35:27,161][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 02:35:27,244][root][INFO] - Loading pretrained ViT-L-14-336 from OpenAI.
+[2024-02-15 02:35:52,176][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 02:35:52,184][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 02:35:52,267][root][INFO] - Loading pretrained ViT-B-16 from OpenAI.
+[2024-02-15 02:36:58,707][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 02:36:58,714][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 02:36:58,857][root][INFO] - Loading pretrained ViT-B-16 from OpenAI.
+[2024-02-15 02:37:41,593][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 02:37:41,600][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 02:37:41,682][root][INFO] - Loading pretrained ViT-B-16 from OpenAI.
+[2024-02-15 02:38:04,742][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 02:38:04,749][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 02:38:04,829][root][INFO] - Loading pretrained ViT-B-16 from OpenAI.
+[2024-02-15 02:40:36,457][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 02:40:36,467][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 02:40:36,552][root][INFO] - Loading pretrained ViT-B-16 from OpenAI.
+[2024-02-15 02:42:21,403][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 02:42:21,415][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 02:42:21,529][root][INFO] - Loading pretrained ViT-B-16 from OpenAI.
+[2024-02-15 02:43:39,452][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 02:43:39,462][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 02:43:39,545][root][INFO] - Loading pretrained ViT-B-16 from OpenAI.
+[2024-02-15 02:44:18,751][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 02:44:18,758][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 02:44:18,840][root][INFO] - Loading pretrained ViT-B-16 from OpenAI.
+[2024-02-15 02:45:46,350][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 02:45:46,357][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 02:45:46,438][root][INFO] - Loading pretrained ViT-B-16 from OpenAI.
+[2024-02-15 02:46:37,032][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 02:46:37,039][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 02:46:37,120][root][INFO] - Loading pretrained ViT-B-16 from OpenAI.
+[2024-02-15 02:47:51,697][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 02:47:51,704][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 02:47:51,784][root][INFO] - Loading pretrained ViT-B-16 from OpenAI.
+[2024-02-15 02:48:48,189][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 02:48:48,195][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 02:48:48,278][root][INFO] - Loading pretrained ViT-B-16 from OpenAI.
+[2024-02-15 02:51:57,639][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 02:51:57,645][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 02:51:57,724][root][INFO] - Loading pretrained ViT-B-16 from OpenAI.
+[2024-02-15 02:53:13,013][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 02:53:13,020][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 02:53:13,101][root][INFO] - Loading pretrained ViT-B-16 from OpenAI.
+[2024-02-15 02:54:12,093][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 02:54:12,100][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 02:54:12,182][root][INFO] - Loading pretrained ViT-B-16 from OpenAI.
+[2024-02-15 02:55:12,348][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 02:55:12,355][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 02:55:12,442][root][INFO] - Loading pretrained ViT-B-16 from OpenAI.
+[2024-02-15 02:57:34,290][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 02:57:34,296][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 02:57:34,377][root][INFO] - Loading pretrained ViT-B-16 from OpenAI.
+[2024-02-15 02:58:56,021][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 02:58:56,030][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 02:58:56,128][root][INFO] - Loading pretrained ViT-B-16 from OpenAI.
+[2024-02-15 03:01:02,026][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 03:01:02,035][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 03:01:02,139][root][INFO] - Loading pretrained ViT-B-16 from OpenAI.
+[2024-02-15 03:03:01,110][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 03:03:01,117][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 03:03:01,198][root][INFO] - Loading pretrained ViT-B-16 from OpenAI.
+[2024-02-15 03:03:24,167][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 03:03:24,174][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 03:03:24,254][root][INFO] - Loading pretrained ViT-B-16 from OpenAI.
+[2024-02-15 03:04:26,822][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 03:04:26,832][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 03:04:26,941][root][INFO] - Loading pretrained ViT-B-16 from OpenAI.
+[2024-02-15 03:06:07,352][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 03:06:07,364][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 03:06:07,475][root][INFO] - Loading pretrained ViT-B-16 from OpenAI.
+[2024-02-15 03:06:55,838][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 03:06:55,845][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 03:06:55,926][root][INFO] - Loading pretrained ViT-B-16 from OpenAI.
+[2024-02-15 03:08:17,040][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 03:08:17,047][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 03:08:17,127][root][INFO] - Loading pretrained ViT-B-16 from OpenAI.
+[2024-02-15 03:10:31,069][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2024-02-15 03:10:31,076][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2024-02-15 03:10:31,155][root][INFO] - Loading pretrained ViT-B-16 from OpenAI.
