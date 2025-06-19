@@ -64,7 +64,12 @@ Reference: [lightning-hydra-template](https://github.com/ashleve/lightning-hydra
 From [OneDrive](https://drive.google.com/drive/folders/1x2Z678utcJjYPCD0KLnquxb2n048qkv2?usp=sharing) and save in the folder of `./model_ckpts`
 
 ### Inference 
-Run the bash files in eval folder.
+The default bash scripts in the eval folder provide inference commands for all datasets. For example, to test on the FMOW dataset using the CLIP-ViT/B16 model, update the data and checkpoint paths, then run:
+```
+bash eval/FMOW.sh
+```
+
+To test with other models or datasets, simply follow the comments in the bash scripts and execute them accordingly.
 
 ## <a name="cite"/> :clipboard: Citation
 
